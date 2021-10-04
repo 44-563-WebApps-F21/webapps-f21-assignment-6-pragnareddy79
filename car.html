@@ -3,12 +3,12 @@
 
 <head>
     <title>Sixth Assignment Part3</title>
-   
+  
 </head>
 
 <body>
 
-    <h2>Tejaswi Avula builds a bear</h2>
+    <h2>Pragna Nathala ordersa car</h2>
 
     <form>
         <div>
@@ -27,25 +27,25 @@
     </form>
     <p id="result">This text will be replaced </p>
 
-    
+
 
  <script>
         var my_car;
         function orderCar() {
 
-            my_car = "";
+            my_bear = "";
 
             electric = document.getElementById("cb1_electric").checked
             ac= document.getElementById("cb1_ac").checked
             gps= document.getElementById("cb1_gps").checked
-            gps = "electric : " + electric + " "+"ac:  " + ac +" " +"gps:  " + gps;
+            my_car = "electric : " + electric + "  "+"ac:  " + ac +" " +"gps:  " + gps;
 
             out = document.getElementById("result")
 
             out.innerHTML = my_car
         }
 
-       
+      
 </script>
 </body>
 </html>
