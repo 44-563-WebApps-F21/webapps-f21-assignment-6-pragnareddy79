@@ -26,7 +26,18 @@
 
     </form>
     <p id="result">This text will be replaced </p>
+    <form>
 
+        <label for="cb2_property">Enter a property </label>
+        <input type="text" id="cb2_property" name="property" value="color"> <br>
+
+        <label for="cb2_value">Enter a value </label>
+        <input type="text" id="cb2_value" name="value"> <br>
+
+        <input type="button" onclick="updateCar()" value="Update the car">
+    </form>
+
+    <p id="result2">This text will be replaced </p>
 
 
  <script>
@@ -45,6 +56,14 @@
             out.innerHTML = my_car
         }
 
+        function updateCar() {
+            my_car = "";
+            out = document.getElementById("result2")
+            property = document.getElementById("cb2_property").value
+            value = document.getElementById("cb2_value").value
+            my_car = property + ":" + value;
+            out.innerHTML = my_car
+        }
       
 </script>
 </body>
