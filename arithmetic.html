@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h2>Pragna Nathala computes</h2>
+</head>
+  
+ 
+<body>
+
+
+<form>
+    <label for="form1_number">Enter a base </label>
+    <input type="number" id="form1_number" name="form1_number" value=10> <br>
+
+    <label for="form1_number2">Enter an exponent </label>
+    <input type="number" id="form1_number2" name="form1_number2" value="2"> <br>
+
+    <input type="button" onclick="powers()" value="Compute">
+</form>
+
+<p id="result">This text will be replaced by result </p>
+
+<form>
+    <input type="radio" id="rg1_plus" onclick="processRadio()" name="operation" value="plus">
+    <label for="rg1_plus">+</label></br>
+
+    <input type="radio" id="rg1_minus" name="operation" onclick="processRadio()" value="minus">
+    <label for="rg1_minus">-</label></br>
+
+    <input type="radio" id="rg1_times" name="operation" onclick="processRadio()" value="times">
+    <label for="rg1_times">*</label></br>
+
+    <input type="radio" id="rg1_divide" name="operation" onclick="processRadio()" value="divide">
+    <label for="rg1_divide">/</label></br>
+
+</form>
+
+<p id="arithmetic">This results get changed </p>
+
+<script>
+    function powers() {
+        var a = document.getElementById("form1_number").value;
+        var b = document.getElementById("form1_number2").value;
+        var product = 1;
+        var p = a;
+        out = document.getElementById("result")
+        for (var i = a-1; i > 0; i--) {
+            a = a * i;
+        }
+        var c = p - b;
+        for (j = c-1 ; j > 0; j--) {
+            c = c * j;
+        }
+        product = a / c;
+        console.log(product);
+        out.innerHTML = p + " permute " + b + " should be " + product;
+    }
+
+    function processRadio() {
+            let first = document.getElementById("form1_number").value;
+            let second = document.getElementById("form1_number2").value;
+            plus = document.getElementById("rg1_plus").checked
+            minus = document.getElementById("rg1_minus").checked
+            times = document.getElementById("rg1_times").checked
+            divide = document.getElementById("rg1_divide").checked
+           
+            if (plus) {
+                document.getElementById("arithmetic").innerHTML = (Number)(first) + (Number)(second)
+            }
+            if (minus) {
+                document.getElementById("arithmetic").innerHTML = first - second
+            }
+            if (times) {
+                document.getElementById("arithmetic").innerHTML = first * second
+            }
+            if (divide) {
+                document.getElementById("arithmetic").innerHTML = first / second
+            }
+        }
+
+</script>
+
+
+</body>
+</html>
