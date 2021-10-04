@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sixth Assignment Part3</title>
+   
+</head>
+
+<body>
+
+    <h2>Tejaswi Avula builds a bear</h2>
+
+    <form>
+        <div>
+            <label for="cb1_electric">electric </label>
+            <input type="checkbox" id="cb1_electric" name="electric" value=electric> <br>
+
+            <label for="cb1_ac">ac </label>
+            <input type="checkbox" id="cb1_ac" name="ac" value=ac> <br>
+
+            <label for="cb1_gps">gps</label>
+            <input type="checkbox" id="cb1_gps" name="gps" value="gps"> <br>
+
+            <input type="button" onclick="orderCar()" value="Order a car">
+        </div>
+
+    </form>
+    <p id="result">This text will be replaced </p>
+
+    
+
+ <script>
+        var my_car;
+        function orderCar() {
+
+            my_car = "";
+
+            electric = document.getElementById("cb1_electric").checked
+            ac= document.getElementById("cb1_ac").checked
+            gps= document.getElementById("cb1_gps").checked
+            gps = "electric : " + electric + " "+"ac:  " + ac +" " +"gps:  " + gps;
+
+            out = document.getElementById("result")
+
+            out.innerHTML = my_car
+        }
+
+       
+</script>
+</body>
+</html>
